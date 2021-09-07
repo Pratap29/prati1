@@ -1,7 +1,0 @@
-#!/bin/bash
-## This is the sample shell script
-
-mkdir /createdbyscript
-touch /createdbyscript//testfile.txt
-ech "Testing script file" >> /createdbyscript//testfile.txt
-
