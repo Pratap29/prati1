@@ -25,6 +25,8 @@ apt update -y
 apt install -y apt-transport-https -y
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+(or)
+curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 
 cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
@@ -120,6 +122,7 @@ kubectl get pods --all-namespaces
 
 # Get token
 
+
 kubeadm token create --print-join-command
 
 =========In Master Node End====================
@@ -127,6 +130,7 @@ kubeadm token create --print-join-command
 
 Add Worker Machines to Kubernates Master
 =========================================
+
 
 Copy kubeadm join token from and execute in Worker Nodes to join to cluster
 
