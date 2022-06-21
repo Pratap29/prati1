@@ -157,4 +157,19 @@ kubectl expose pod nginx-demo --port=80 --type=NodePort
 
 Get Node Port details 
 =====================
-kubectl get services			
+kubectl get services	
+TCP     6443*       Kubernetes API Server
+TCP     2379-2380   etcd server client API
+TCP     10250       Kubelet API
+TCP     10251       kube-scheduler
+TCP     10252       kube-controller-manager
+TCP     10255       Read-Only Kubelet API
+
+Worker Nodes
+TCP     10250       Kubelet API
+TCP     10255       Read-Only Kubelet API
+TCP     30000-32767 NodePort Services
+
+
+
+
